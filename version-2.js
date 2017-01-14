@@ -108,7 +108,7 @@ module.exports = {
       options['body'] = parameters.payload;
     }
     
-    request(options, function(error, response, body) {
+    return request(options, function(error, response, body) {
       if (typeof callback === 'function') {
         callback(error, response);
       }
