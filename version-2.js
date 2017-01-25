@@ -91,6 +91,10 @@ module.exports = {
       json: true
     };
     
+    if (parameters.timeout) {
+      options.timeout = parameters.timeout;
+    }
+    
     if (parameters.query !== undefined) {
       trace('query:' + JSON.stringify(parameters.query));
       options['qs'] = parameters.query;
